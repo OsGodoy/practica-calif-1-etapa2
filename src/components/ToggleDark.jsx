@@ -6,7 +6,7 @@ export default function ToggleDark(props) {
 
   return (
     <button
-      className="text-slate-400 h-8 w-8 absolute top-5 right-5 flex items-center justify-center"
+      className="cursor-pointer text-slate-400 h-8 w-8 absolute top-5 right-5 flex items-center justify-center"
       onClick={() => setIsDark(!isDark)}
     >
       <svg

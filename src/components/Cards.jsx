@@ -1,4 +1,4 @@
-export default function Cards({ miembros }) {
+export default function Cards({ miembros, isDark }) {
   return (
     <ul className="w-80 sm:w-120 place-items-center grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-x-8 p-6 [&>*:nth-child(2n+2)]:top-10 sm:[&>*:nth-child(2n+2)]:top-0 sm:[&>*:nth-child(3n+2)]:top-10">
       {miembros.map((miembro) => (
@@ -8,7 +8,9 @@ export default function Cards({ miembros }) {
         >
           <div className="h-full w-[90%] flex flex-col items-center justify-center self-start">
             <img
-              className="h-[90%] w-full object-cover rounded-tl-xl"
+              className={`h-[90%] w-full object-cover rounded-tl-xl ${
+                isDark ? "border-1 border-teal-400" : "border-0"
+              }`}
               src={miembro.imageUrl}
               alt=""
             />

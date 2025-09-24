@@ -14,7 +14,11 @@ export default function App() {
     >
       <header className="w-80 sm:w-110 px-5 sm:p-0 flex flex-col sm:flex-row items-center justify-center">
         <ToggleDark isDark={isDark} setIsDark={setIsDark} />
-        <h1 className="w-60 text-2xl sm:text-xl font-bold font-serif flex items-center sm:self-start justify-start sm:pl-0">
+        <h1
+          className={`w-60 text-2xl sm:text-xl font-bold font-serif flex items-center sm:self-start justify-start sm:pl-0 ${
+            isDark ? "text-emerald-400" : "text-slate-800"
+          } `}
+        >
           The creative crew
         </h1>
         <div className="w-60 pt-4 sm:pt-0 flex flex-col items-center justify-center">
@@ -26,7 +30,7 @@ export default function App() {
         </div>
       </header>
       <div className="flex items-center justify-center">
-        <Cards miembros={miembros} />
+        <Cards miembros={miembros} isDark={isDark} />
       </div>
     </main>
   );

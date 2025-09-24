@@ -1,12 +1,10 @@
-import React from "react";
-
 export default function ToggleDark(props) {
   const setIsDark = props.setIsDark;
   const isDark = props.isDark;
 
   return (
     <button
-      className="cursor-pointer text-slate-400 h-8 w-8 absolute top-5 right-5 flex items-center justify-center"
+      className="cursor-pointer text-slate-400 h-10 w-10 sm:order-3 flex items-center justify-center self-end sm:self-start"
       onClick={() => setIsDark(!isDark)}
     >
       <svg

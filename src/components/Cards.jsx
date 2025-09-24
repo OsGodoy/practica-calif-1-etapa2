@@ -8,9 +8,7 @@ export default function Cards({ miembros, isDark }) {
         >
           <div className="h-full w-[90%] flex flex-col items-center justify-center self-start">
             <img
-              className={`h-[90%] w-full object-cover rounded-tl-xl ${
-                isDark ? "border-1 border-teal-400" : "border-0"
-              }`}
+              className="h-[90%] w-full object-cover rounded-tl-xl"
               src={miembro.imageUrl}
               alt=""
             />

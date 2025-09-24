@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { miembros } from "./data/miembros.js";
 import Cards from "./components/Cards";
-import ToggleDark from "./ToggleDark.jsx";
+import ToggleDark from "./components/ToggleDark.jsx";
 
 export default function App() {
   const [isDark, setIsDark] = useState(false);
@@ -23,7 +23,7 @@ export default function App() {
             working in various locations from the world.
           </p>
         </div>
-        <ToggleDark isDark={isDark} setIsDark={setIsDark}/>
+        <ToggleDark isDark={isDark} setIsDark={setIsDark} />
       </header>
       <div className="flex items-center justify-center">
         <Cards miembros={miembros} />
